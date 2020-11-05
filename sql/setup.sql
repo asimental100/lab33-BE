@@ -1,6 +1,9 @@
-DROP TABLE IF EXISTS seed_data;
+DROP TABLE IF EXISTS candidate;
 
-CREATE TABLE seed_data (
+CREATE TABLE candidate (
   id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-  "data" TEXT NOT NULL
+  "name" TEXT NOT NULL,
+  party TEXT NOT NULL,
+  birth_year YEAR NOT NULL,
+  winning BOOLEAN NOT NULL
 );
