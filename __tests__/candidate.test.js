@@ -11,7 +11,7 @@ describe('Candidate Route', () => {
 
   it('creates a candidate via POST route', () => {
     return request(app)
-      .post('/api/v1/candidates')
+      .post('api/v1/candidates')
       .send({
         name: 'Silvio Berlusconi',
         party: 'Bunga Bunga',
