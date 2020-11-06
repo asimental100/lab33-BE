@@ -4,6 +4,6 @@ CREATE TABLE candidates (
   id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
   "name" TEXT NOT NULL,
   party TEXT NOT NULL,
-  birth_year YEAR NOT NULL,
+  birth_year INT NOT NULL,
   winning BOOLEAN NOT NULL
 );
