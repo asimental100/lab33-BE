@@ -1,0 +1,20 @@
+name: Jest Tests
+
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container: node:latest
+    services:
+      postgres:
+        image: postgres
+        env:
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: 6767
+    steps:
+    - uses: actions/checkout@v2
+    - run: npm ci
+    - run: npm test
+      env:
+        CI: true
+        DATABASE_URL: postgres://postgres:6767@localhost:5432/postgres
